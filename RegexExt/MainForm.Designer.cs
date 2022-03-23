@@ -56,6 +56,7 @@ namespace RegexExt
 			this.tabPageHelp = new System.Windows.Forms.TabPage();
 			this.richTextBoxHelp = new System.Windows.Forms.RichTextBox();
 			this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+			this.checkBoxDeterministic = new System.Windows.Forms.CheckBox();
 			this.tabControlMain.SuspendLayout();
 			this.tabPageMatching.SuspendLayout();
 			this.tabPageSettings.SuspendLayout();
@@ -163,6 +164,7 @@ namespace RegexExt
 			// 
 			// tabPageSettings
 			// 
+			this.tabPageSettings.Controls.Add(this.checkBoxDeterministic);
 			this.tabPageSettings.Controls.Add(this.numericUpDownThreadCount);
 			this.tabPageSettings.Controls.Add(this.labelThreadCount);
 			this.tabPageSettings.Controls.Add(this.buttonJavaPath);
@@ -178,7 +180,7 @@ namespace RegexExt
 			// 
 			// numericUpDownThreadCount
 			// 
-			this.numericUpDownThreadCount.Location = new System.Drawing.Point(92, 85);
+			this.numericUpDownThreadCount.Location = new System.Drawing.Point(92, 120);
 			this.numericUpDownThreadCount.Maximum = new decimal(new int[] {
 									32,
 									0,
@@ -201,7 +203,7 @@ namespace RegexExt
 			// 
 			// labelThreadCount
 			// 
-			this.labelThreadCount.Location = new System.Drawing.Point(9, 85);
+			this.labelThreadCount.Location = new System.Drawing.Point(9, 122);
 			this.labelThreadCount.Name = "labelThreadCount";
 			this.labelThreadCount.Size = new System.Drawing.Size(77, 23);
 			this.labelThreadCount.TabIndex = 3;
@@ -255,6 +257,15 @@ namespace RegexExt
 			"- Union\n\n\"&\" - Intersection\n\n\"-\" - Subtraction\n\n\"~\" - Complement\n\n\"+\", \"*\", \"?\" " +
 			"- Repetitions";
 			// 
+			// checkBoxDeterministic
+			// 
+			this.checkBoxDeterministic.Location = new System.Drawing.Point(9, 79);
+			this.checkBoxDeterministic.Name = "checkBoxDeterministic";
+			this.checkBoxDeterministic.Size = new System.Drawing.Size(136, 18);
+			this.checkBoxDeterministic.TabIndex = 5;
+			this.checkBoxDeterministic.Text = "Deterministic";
+			this.checkBoxDeterministic.UseVisualStyleBackColor = true;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +286,7 @@ namespace RegexExt
 			this.tabPageHelp.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.CheckBox checkBoxDeterministic;
 		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
 		private System.Windows.Forms.RichTextBox richTextBoxHelp;
 		private System.Windows.Forms.NumericUpDown numericUpDownThreadCount;

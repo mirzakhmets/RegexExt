@@ -73,7 +73,13 @@ namespace RegexExt
 				
 				psi.UseShellExecute = false;
 				
-				psi.Arguments =  " -jar \"" + Environment.CurrentDirectory + "\\" + "regexplus.jar" + "\""
+				string deterministic = "";
+				
+				if (this.checkBoxDeterministic.Checked) {
+					deterministic = " -d ";
+				}
+				
+				psi.Arguments =  " -jar \"" + Environment.CurrentDirectory + "\\" + "regexplus.jar" + deterministic + "\""
 						+ " \"" + textBoxPattern.Text + "\" \"" + s + "\"";
 				
 				Process prc = new Process();
