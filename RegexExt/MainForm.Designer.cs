@@ -48,6 +48,7 @@ namespace RegexExt
 			this.textBoxPattern = new System.Windows.Forms.TextBox();
 			this.labelPattern = new System.Windows.Forms.Label();
 			this.tabPageSettings = new System.Windows.Forms.TabPage();
+			this.checkBoxDeterministic = new System.Windows.Forms.CheckBox();
 			this.numericUpDownThreadCount = new System.Windows.Forms.NumericUpDown();
 			this.labelThreadCount = new System.Windows.Forms.Label();
 			this.buttonJavaPath = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@ namespace RegexExt
 			this.tabPageHelp = new System.Windows.Forms.TabPage();
 			this.richTextBoxHelp = new System.Windows.Forms.RichTextBox();
 			this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-			this.checkBoxDeterministic = new System.Windows.Forms.CheckBox();
 			this.tabControlMain.SuspendLayout();
 			this.tabPageMatching.SuspendLayout();
 			this.tabPageSettings.SuspendLayout();
@@ -178,6 +178,16 @@ namespace RegexExt
 			this.tabPageSettings.Text = "Settings";
 			this.tabPageSettings.UseVisualStyleBackColor = true;
 			// 
+			// checkBoxDeterministic
+			// 
+			this.checkBoxDeterministic.Location = new System.Drawing.Point(9, 79);
+			this.checkBoxDeterministic.Name = "checkBoxDeterministic";
+			this.checkBoxDeterministic.Size = new System.Drawing.Size(136, 18);
+			this.checkBoxDeterministic.TabIndex = 5;
+			this.checkBoxDeterministic.Text = "Deterministic";
+			this.checkBoxDeterministic.UseVisualStyleBackColor = true;
+			this.checkBoxDeterministic.Visible = false;
+			// 
 			// numericUpDownThreadCount
 			// 
 			this.numericUpDownThreadCount.Location = new System.Drawing.Point(92, 120);
@@ -256,15 +266,6 @@ namespace RegexExt
 			this.richTextBoxHelp.Text = "\"a-z\" - Alphabet\n\n\".\" - Any character\n\n\"( )\" - Group\n\n\"[ ]\" - Character set\n\n\"|\" " +
 			"- Union\n\n\"&\" - Intersection\n\n\"-\" - Subtraction\n\n\"~\" - Complement\n\n\"+\", \"*\", \"?\" " +
 			"- Repetitions";
-			// 
-			// checkBoxDeterministic
-			// 
-			this.checkBoxDeterministic.Location = new System.Drawing.Point(9, 79);
-			this.checkBoxDeterministic.Name = "checkBoxDeterministic";
-			this.checkBoxDeterministic.Size = new System.Drawing.Size(136, 18);
-			this.checkBoxDeterministic.TabIndex = 5;
-			this.checkBoxDeterministic.Text = "Deterministic";
-			this.checkBoxDeterministic.UseVisualStyleBackColor = true;
 			// 
 			// MainForm
 			// 
