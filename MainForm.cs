@@ -5,7 +5,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+
+#if TRIAL
 using Microsoft.Win32;
+#endif
 
 namespace RegexExt
 {
@@ -33,6 +36,7 @@ namespace RegexExt
     private TabPage tabPageMatching;
     private TabControl tabControlMain;
 
+    #if TRIAL
     public void CheckRuns() {
 		try {
 			RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\OVG-Developers", true);
@@ -73,6 +77,7 @@ namespace RegexExt
 		
 		return false;
 	}
+    #endif
     
     public MainForm() {
     	this.InitializeComponent();
@@ -421,9 +426,11 @@ namespace RegexExt
     }
 		void MainFormShown(object sender, EventArgs e)
 		{
+			#if TRIAL
 			if (!IsRegistered()) {
 				CheckRuns();
 			}
+			#endif
 		}
   }
 }
